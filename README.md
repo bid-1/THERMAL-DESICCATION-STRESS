@@ -25,3 +25,30 @@ plt.grid(True)
 
 # Show the plot
 plt.show()
+ # Plotting
+>>> plt.figure(figsize=(10, 6))
+<Figure size 1000x600 with 0 Axes>
+>>>
+>>> # Line plots with specific colors
+>>> plt.plot(timestamps, aerial_temp, label='Aerial Temperature', marker='o', color='red')
+[<matplotlib.lines.Line2D object at 0x0000023FBEDA9550>]
+>>> plt.plot(timestamps, substratum_temp, label='Substratum Temperature', marker='s', color='blue')
+[<matplotlib.lines.Line2D object at 0x0000023FC0A28310>]
+>>> plt.plot(timestamps, body_temp, label='Body Temperature', marker='^', color='green')
+[<matplotlib.lines.Line2D object at 0x0000023FC0A6CD50>]
+>>>
+>>> # Adding labels, title, and legend
+>>> plt.xlabel('Duration of Aerial Exposure (hours)')
+Text(0.5, 0, 'Duration of Aerial Exposure (hours)')
+>>> plt.ylabel('Temperature (°C)')
+Text(0, 0.5, 'Temperature (°C)')
+>>> plt.title('Temperature Profiles during Tidal Emersion')
+Text(0.5, 1.0, 'Temperature Profiles during Tidal Emersion')
+>>> plt.xticks(ticks=timestamps, labels=duration)
+([<matplotlib.axis.XTick object at 0x0000023FC0A3B550>, <matplotlib.axis.XTick object at 0x0000023FC0A39250>, <matplotlib.axis.XTick object at 0x0000023FBEAA6A50>, <matplotlib.axis.XTick object at 0x0000023FC0A6FED0>, <matplotlib.axis.XTick object at 0x0000023FC0A7A150>], [Text(0.0, 0, '0'), Text(1.0, 0, '2'), Text(2.0, 0, '4'), Text(3.0, 0, '6'), Text(4.0, 0, '8')])
+>>> plt.legend(loc='upper right')  # Place the legend in the top-right corner
+<matplotlib.legend.Legend object at 0x0000023FC0A283D0>
+>>> plt.grid(False)  # Turn off the grid
+>>>
+>>> # Show the plot
+>>> plt.show()
